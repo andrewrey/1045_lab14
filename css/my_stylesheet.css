@@ -1,18 +1,21 @@
+.movingDiv {
+  border: solid 1px black;
+  position: relative;
+  margin: 30px 5px;
+  padding: 20px 5px;
+  width: 80%;
 
-.movingDiv{
-border: solid 1px black;
-position:relative;
-margin:30px 5px;
-padding:20px 5px;
-width:80%;
-
-line-height:60px;
+  line-height: 60px;
 }
 
-fieldset{
-border: solid 1px #777777;
+fieldset {
+  border: solid 1px #777777;
 }
 
-.required{
-background-color:#EEEE55;
+.required {
+  background-color: #eeee55;
+}
+
+button {
+  cursor: pointer;
 }

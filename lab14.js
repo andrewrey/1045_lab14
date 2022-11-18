@@ -1,10 +1,12 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
+let moveButton = document.querySelector("button");
 
 const width = 800;
 const height = 500;
 const MID = width / 2;
 const GROUND = 400;
+let steps = 20;
 
 function drawBackground() {
   ctx.fillStyle = "cyan";
@@ -69,5 +71,19 @@ function drawSnowman() {
   ctx.fillRect(MID - 30, GROUND - 340, 60, 40);
 }
 
+const moveFrosty = () => {
+  ctx.save();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBackground();
+  ctx.translate(steps, 0);
+  steps += 20;
+  drawSnowman();
+  ctx.restore();
+  // drawBackground();
+  console.log("test");
+};
+
 drawBackground();
 drawSnowman();
+
+moveButton.addEventListener("click", moveFrosty);
